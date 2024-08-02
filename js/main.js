@@ -1,5 +1,6 @@
 import {getLanguagesInfo} from "./language.js";
-import profileImg from "/public/profileImg.png"
+
+const profileImg = "/profileImg.png";
 
 document.querySelector('#app').innerHTML = `
 <div class="pageLayout">
