@@ -1,5 +1,6 @@
 import {getLanguagesInfo} from "./language.js";
 import {getTools} from "./tools.js";
+import {getInterestsData} from "./interests.js";
 
 const profileImg = "public/profileImg.png";
 
@@ -44,21 +45,20 @@ document.querySelector('#app').innerHTML = `
         <div class="extraBoxContainer">
             <div class="interestsBox">
                 <input class="boxTitile" value="Interests"/>
+                <div id="listInterestsContainer" class="listInterestsContainer"></div>
             </div>
             
             <div class="disclaimer">
                 <div class="disclaimerTextArea" contenteditable="true">Let´s chat! I´m ready to work on excinting projects</div>
                 <input class="disclaimerEmail" type="email" value="srkarthik.designscape@gmail.com" placeholder="Email"/>
             </div>
-        
         </div>
         
     </div>
     
-    
-         
 </div> 
 `
 
 getLanguagesInfo()
 getTools()
+getInterestsData()

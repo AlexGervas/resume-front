@@ -252,9 +252,33 @@ button:focus-visible {
     width: 243px;
     height: 153px;
     padding: 12px;
-    /*gap: 16px;*/
     border-radius: 12px;
     background: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listInterestsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.interestsList {
+    background: #FFFFFF;
+    padding: 4px 10px 4px 10px;
+    border-radius: 40px;
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: box-shadow 0.1s;
+}
+
+.interestsList:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: lightgray;
 }
 
 .disclaimer {
@@ -276,6 +300,12 @@ button:focus-visible {
     font-weight: 500;
     line-height: 21px;
     text-align: left;
+    overflow: auto;
+    resize: none;
+}
+
+.disclaimerTextArea::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari и Opera */
 }
 
 .disclaimerEmail {
