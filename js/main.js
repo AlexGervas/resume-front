@@ -1,4 +1,5 @@
 import {getLanguagesInfo} from "./language.js";
+import {getTools} from "./tools.js";
 
 const profileImg = "public/profileImg.png";
 
@@ -16,16 +17,38 @@ document.querySelector('#app').innerHTML = `
         </div>
         
         <div id="languagesBox" class="languagesBox">
-            <input class="languagesBoxTitle" value="Languages"/>
+            <input class="boxTitile" value="Languages"/>
             <div class="listLanguagesRowContainer">
                 <div id="languagesList" class="nameLanguage"> </div>
                 <div id="languagesProgress" class="levelLanguage"></div>
             </div>
         </div>
+    </div>
+    
+    <div class="mainContainer">
+        <div class="experienceBoxContainer"></div>
         
-        
-    </div>     
+        <div class="toolsBoxContainer">
+            <input class="boxTitile" value="Tools"/>
+            <div id="toolsList" class="toolsListColumn">
+<!--                <div class="toolsBox"></div>-->
+<!--                <div class="subTitleBlock">design</div>-->
+            </div>
+            
+        </div>
+    </div>
+    
+<!--    <div class="footer">-->
+<!--        <div class="educationBoxContainer"></div>-->
+<!--        <div class="extraBoxContainer">-->
+<!--            <div class="interestsBox"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+    
+    
+         
 </div> 
 `
 
 getLanguagesInfo()
+getTools()

@@ -11,14 +11,6 @@ body {
     gap: 20px;
 }
 
-/*.card {*/
-/*    padding: 2em;*/
-/*}*/
-
-/*.read-the-docs {*/
-/*    color: #888;*/
-/*}*/
-
 button {
     border-radius: 8px;
     border: 1px solid transparent;
@@ -99,7 +91,7 @@ button:focus-visible {
     gap: 10px;
 }
 
-.languagesBoxTitle {
+.boxTitile {
     font-family: Poppins, serif;
     font-size: 14px;
     font-weight: 500;
@@ -139,6 +131,115 @@ button:focus-visible {
     overflow: hidden;
 }
 
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.experienceBoxContainer {
+    width: 441px;
+    height: 335px;
+    padding: 12px;
+    gap: 16px;
+    border-radius: 12px;
+    background: #F0F0F0;
+}
+
+.toolsBoxTitle {
+    font-family: Poppins, serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #000000;
+    text-align: start;
+}
+
+.toolsBoxContainer {
+    width: 100px;
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 12px;
+    background: #F0F0F0;
+    padding: 12px;
+}
+
+.toolsListColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    height: auto;
+    position: relative;
+}
+
+.toolsBox {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 4px 16px 4px;
+}
+
+.toolsBox a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.toolsBox img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.subTitleBlock {
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -180%);
+    background-color: #000000;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 5px;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 2px 6px 2px 6px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.educationBoxContainer {
+    width: 244px;
+    height: 289px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #F0F0F0;
+}
+
+.extraBoxContainer {
+    width: 267px;
+    height: 289px;
+}
+
+.interestsBox {
+    width: 267px;
+    height: 177px;
+    padding: 12px;
+    /*gap: 16px;*/
+    border-radius: 12px;
+    background: #F0F0F0;
+}
+
 #app {
     padding: 15px 20px;
     /*text-align: center;*/
@@ -153,7 +254,7 @@ button:focus-visible {
 input {
     background: unset;
     border: none;
-    /*display: none;*/
+    cursor: pointer;
 }
 
 .active {
