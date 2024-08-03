@@ -3,19 +3,18 @@ export function getTools() {
         {
             type: "design", list: [
                 {logo: "public/logoFigma.png", link: "https://www.figma.com/"},
-                {logo: "public/adobe illustrator.png", link: "https://www.adobe.com/products/illustrator.html"},
-                {logo: "public/logoNotion.png", link: "https://www.notion.so/"},
                 {logo: "public/adobe photoshop.png", link: "https://www.adobe.com/ru/products/photoshop.html"},
+                {logo: "public/adobe illustrator.png", link: "https://www.adobe.com/products/illustrator.html"},
                 {logo: "public/adobe premiere.png", link: "https://www.adobe.com/products/premiere.html"},
-
+                {logo: "public/logoNotion.png", link: "https://www.notion.so/"},
                 {logo: "public/logoMeet.png", link: "https://meet.google.com/landing"}
             ]
         },
         {
             type: "no-code", list: [
                 {logo: "public/logoZapìer 1.png", link: "https://zapier.com/"},
-                {logo: "public/logoFramer.png", link: "https://www.framer.com/"},
                 {logo: "public/logoWebflow.png", link: "https://webflow.com/"},
+                {logo: "public/logoFramer.png", link: "https://www.framer.com/"},
                 {logo: "public/logoWordpress.png", link: "https://wordpress.com/"}
             ]
         },

@@ -34,12 +34,26 @@ document.querySelector('#app').innerHTML = `
         </div>
     </div>
     
-<!--    <div class="footer">-->
-<!--        <div class="educationBoxContainer"></div>-->
-<!--        <div class="extraBoxContainer">-->
-<!--            <div class="interestsBox"></div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="footerContainer">
+        <div class="educationBoxContainer">
+            <input class="boxTitile" value="Education"/>
+            
+            
+        </div>
+        
+        <div class="extraBoxContainer">
+            <div class="interestsBox">
+                <input class="boxTitile" value="Interests"/>
+            </div>
+            
+            <div class="disclaimer">
+                <input class="disclaimerText" value="Let´s chat! I´m ready to work on excinting projects"/>
+                
+            </div>
+        
+        </div>
+        
+    </div>
     
     
          

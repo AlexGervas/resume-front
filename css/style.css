@@ -40,7 +40,7 @@ button:focus-visible {
 }
 
 .nameBox {
-    width: 138px;
+    width: 100px;
     height: 100px;
     border-radius: 12px;
     padding: 12px;
@@ -75,7 +75,7 @@ button:focus-visible {
 }
 
 .languagesBox {
-    width: 267px;
+    width: 243px;
     height: 100px;
     padding: 12px;
     border-radius: 12px;
@@ -138,7 +138,7 @@ button:focus-visible {
 }
 
 .experienceBoxContainer {
-    width: 441px;
+    width: 387px;
     height: 335px;
     padding: 12px;
     gap: 16px;
@@ -169,25 +169,31 @@ button:focus-visible {
 .toolsListColumn {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 12px;
     height: auto;
     position: relative;
+    align-items: center;
+}
+
+.toolsListColumn > div:first-child {
+    height: 79px;
+    width: 68px;
 }
 
 .toolsBox {
     background-color: #FFFFFF;
     border-radius: 12px;
-    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     padding: 16px 4px 16px 4px;
+    height: 54px;
+    width: 68px;
 }
 
 .toolsBox a {
+    transform: translateX(10px);
     display: inline-block;
-    width: 20px;
-    height: 20px;
     text-align: center;
     transition: box-shadow 0.3s; /* Плавный переход для тени */
 }
@@ -217,15 +223,15 @@ button:focus-visible {
     padding: 2px 6px 2px 6px;
 }
 
-.footer {
+.footerContainer {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 20px;
 }
 
 .educationBoxContainer {
     width: 244px;
-    height: 289px;
+    height: 265px;
     padding: 12px;
     border-radius: 12px;
     background: #F0F0F0;
@@ -234,15 +240,31 @@ button:focus-visible {
 .extraBoxContainer {
     width: 267px;
     height: 289px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .interestsBox {
-    width: 267px;
-    height: 177px;
+    width: 243px;
+    height: 153px;
     padding: 12px;
     /*gap: 16px;*/
     border-radius: 12px;
     background: #F0F0F0;
+}
+
+.disclaimer {
+    color: #FFFFFF;
+    background: #000000;
+    width: 243px;
+    height: 68px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.disclaimer > input {
+
 }
 
 #app {
