@@ -47,8 +47,8 @@ document.querySelector('#app').innerHTML = `
             </div>
             
             <div class="disclaimer">
-                <input class="disclaimerText" value="Let´s chat! I´m ready to work on excinting projects"/>
-                
+                <div class="disclaimerTextArea" contenteditable="true">Let´s chat! I´m ready to work on excinting projects</div>
+                <input class="disclaimerEmail" type="email" value="srkarthik.designscape@gmail.com" placeholder="Email"/>
             </div>
         
         </div>
