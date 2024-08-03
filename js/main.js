@@ -30,11 +30,7 @@ document.querySelector('#app').innerHTML = `
         
         <div class="toolsBoxContainer">
             <input class="boxTitile" value="Tools"/>
-            <div id="toolsList" class="toolsListColumn">
-<!--                <div class="toolsBox"></div>-->
-<!--                <div class="subTitleBlock">design</div>-->
-            </div>
-            
+            <div id="toolsList" class="toolsListColumn"></div>
         </div>
     </div>
     

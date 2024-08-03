@@ -189,6 +189,11 @@ button:focus-visible {
     width: 20px;
     height: 20px;
     text-align: center;
+    transition: box-shadow 0.3s; /* Плавный переход для тени */
+}
+
+.toolsBox a:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень при наведении */
 }
 
 .toolsBox img {
