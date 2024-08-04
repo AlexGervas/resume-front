@@ -4,6 +4,7 @@ import {getInterestsData} from "./interests.js";
 import {loadFromSessionStorage, saveToSessionStorage} from "./saveData.js";
 import {getEducationsData} from "./education.js";
 import {submitForm} from "./saveToPDF.js";
+import {getExperienceData} from "./experience.js";
 
 const profileImg = "public/profileImg.png";
 
@@ -30,7 +31,10 @@ document.querySelector('#app').innerHTML = `
     </div>
     
     <div class="mainContainer">
-        <div class="experienceBoxContainer"></div>
+        <div class="experienceBoxContainer">
+            <input class="boxTitile" id="experienceTitle" value="Experience"/>
+            <div id="jobListContainer" class="jobListContainer"></div>
+        </div>
         
         <div class="toolsBoxContainer">
             <input class="boxTitile" id="toolsTitle" value="Tools"/>
@@ -64,6 +68,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 getLanguagesInfo()
+getExperienceData()
 getTools()
 getEducationsData()
 getInterestsData()
