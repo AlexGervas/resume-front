@@ -1,7 +1,7 @@
 import {base64Font} from './font/base64.js'
-import {Canvg} from "canvg";
 
 const {jsPDF} = window.jspdf;
+const {Canvg} = window;
 
 export const submitForm = () => {
     const downloadButton = document.getElementById('download-pdf');
