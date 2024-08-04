@@ -11,27 +11,33 @@ export const submitForm = () => {
             unit: 'mm',
             format: 'a4',
         });
-        console.log('doc.internal.pageSize.getWidth() ', doc.internal.pageSize.getWidth())
 
         doc.addFileToVFS("Poppins-Regular.ttf", base64Font);
         doc.addFont("Poppins-Regular.ttf", "Poppins", "normal");
-
         doc.setFont("Poppins");
 
-        doc.html(document.body, {
-            callback: (doc) => {
+        html2canvas(document.body, {scale: 2}).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const imgWidth = 210; // ширина A4 в мм
+            const pageHeight = 295; // высота A4 в мм
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
 
-                // doc.setFont("Emoji");
-                // doc.text("👋🏻", 10, 50);
+            let position = 0;
 
+            // Добавляем изображение в PDF
+            doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
 
-                // doc.addImage(emojiBase64, 'PNG', 10, 10, 30, 30);
-                doc.save('download.pdf');
-            },
-            x: 10,
-            y: 10,
-            width: doc.internal.pageSize.getWidth() - 20,
-            windowWidth: document.body.scrollWidth,
+            // Добавляем дополнительные страницы, если необходимо
+            while (heightLeft >= 0) {
+                position = heightLeft - imgHeight;
+                doc.addPage();
+                doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+
+            doc.save('download.pdf');
         });
     });
 }
