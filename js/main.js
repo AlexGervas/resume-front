@@ -3,6 +3,7 @@ import {getTools} from "./tools.js";
 import {getInterestsData} from "./interests.js";
 import {loadFromSessionStorage, saveToSessionStorage} from "./saveData.js";
 import {getEducationsData} from "./education.js";
+import {submitForm} from "./saveToPDF.js";
 
 const profileImg = "public/profileImg.png";
 
@@ -57,6 +58,8 @@ document.querySelector('#app').innerHTML = `
         
     </div>
     
+    <button id="download-pdf">Download</button>
+    
 </div> 
 `
 
@@ -65,10 +68,12 @@ getTools()
 getEducationsData()
 getInterestsData()
 
+submitForm()
 
 // Work with sessionStorage:
 saveToSessionStorage()
 loadFromSessionStorage()
+
 
 // Loading values when the page loads:
 window.onload = loadFromSessionStorage;
