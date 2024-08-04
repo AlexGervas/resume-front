@@ -1,5 +1,6 @@
-import jsPDF from 'jspdf';
 import {base64Font} from './font/base64.js'
+
+const {jsPDF} = window.jspdf;
 
 export const submitForm = () => {
     const downloadButton = document.getElementById('download-pdf');
