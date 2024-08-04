@@ -17,8 +17,12 @@ export const submitForm = () => {
         const ctxSVG = canvasSVG.getContext('2d');
 
         // Рендерим SVG в canvas
-        const v = await Canvg.fromString(ctxSVG, svgString);
-        await v.render();
+        try {
+            const v = await Canvg.fromString(ctxSVG, svgString);
+            await v.render();
+        } catch (error) {
+            console.error('Error rendering SVG:', error);
+        }
 
         // Создаем PDF
         const doc = new jsPDF({
