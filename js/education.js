@@ -52,7 +52,7 @@ export function getEducationsData() {
     document.addEventListener('DOMContentLoaded', function () {
         const elements = document.querySelectorAll('.heart-icon');
 
-        elements.forEach(element => {
+        elements.forEach((element, index) => {
             element.addEventListener('click', function () {
                 console.log('Тык в сердечко!');
                 const path = this.querySelector('path');
@@ -62,7 +62,14 @@ export function getEducationsData() {
                 const hashtagElement = colorBlock.querySelector('.educationHashtagsList');
                 const footerElement = colorBlock.querySelector('.educationListFooter');
 
-                if (path.getAttribute('fill') === '#F6ED1E') {
+                console.log(data, index, data[index].like)
+
+                const isActive = data[index].like;
+                data[index].like = !isActive;
+
+                console.log(data, index, data[index].like)
+
+                if (!data[index].like) {
                     path.setAttribute('fill', '#FFFFFF');
                     colorBlock.style.backgroundColor = '#FFFFFF';
                     titleElement.classList.remove('active');
