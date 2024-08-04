@@ -29,6 +29,10 @@ button {
     gap: 16px;
 }
 
+#showGreeting {
+    height: 20px;
+}
+
 .nameBox {
     width: 100px;
     height: 100px;
@@ -220,6 +224,7 @@ button {
     align-items: flex-start;
     gap: 8px;
     width: 100%;
+    height: 16px;
 }
 
 .editableContainer {
@@ -474,6 +479,7 @@ button {
     font-weight: 500;
     line-height: 15px;
     width: 70%;
+    height: 17px;
 }
 
 .educationHashtagsList {

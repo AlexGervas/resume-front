@@ -1,12 +1,26 @@
 import {base64Font} from './font/base64.js'
+import {Canvg} from "canvg";
 
 const {jsPDF} = window.jspdf;
 
 export const submitForm = () => {
     const downloadButton = document.getElementById('download-pdf');
 
-    downloadButton.addEventListener('click', () => {
+    downloadButton.addEventListener('click', async () => {
 
+        // Получаем SVG элемент
+        const svgElement = document.getElementById('mySvg');
+        const svgString = new XMLSerializer().serializeToString(svgElement);
+
+        // Создаем canvas для SVG
+        const canvasSVG = document.createElement('canvas');
+        const ctxSVG = canvasSVG.getContext('2d');
+
+        // Рендерим SVG в canvas
+        const v = await Canvg.fromString(ctxSVG, svgString);
+        await v.render();
+
+        // Создаем PDF
         const doc = new jsPDF({
             orientation: 'portrait',
             unit: 'mm',
@@ -23,6 +37,10 @@ export const submitForm = () => {
             const pageHeight = 295; // высота A4 в мм
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             let heightLeft = imgHeight;
+
+            // Добавляем SVG в PDF
+            const imgDataSVG = canvasSVG.toDataURL('image/png');
+            doc.addImage(imgDataSVG, 'PNG', 10, 10, 20, 20); // Измените размеры по необходимости
 
             let position = 0;
 
