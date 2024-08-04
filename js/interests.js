@@ -3,6 +3,6 @@ export function getInterestsData() {
         "typography", "social networks", "research", "dron pilot", "games"];
 
     document.querySelector('#listInterestsContainer').innerHTML = interestData.map((item) =>
-        `<div class="interestsList">${item}</div>`).join('<br>');
+        `<div class="interestsList">${item}</div>`).join('');
 
 }

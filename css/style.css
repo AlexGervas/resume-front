@@ -238,6 +238,66 @@ button:focus-visible {
     padding: 12px;
     border-radius: 12px;
     background: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listEducationContainer {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.listEducationContainer > div:nth-child(1) {
+    height: 104px; /* Высота первого элемента */
+}
+
+.listEducationContainer > div:nth-child(2) {
+    height: 92px; /* Высота второго элемента */
+}
+
+.listEducationContainer > div:nth-child(3) {
+    height: 80px; /* Высота третьего элемента */
+}
+
+.educationList {
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 100px;
+    height: 104px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.educationListDescription {
+    width: 100px;
+}
+
+.educationTitle {
+    font-family: Poppins, serif;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.educationHashtagsList {
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #149063;
+}
+
+.educationListFooter {
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
 }
 
 .extraBoxContainer {

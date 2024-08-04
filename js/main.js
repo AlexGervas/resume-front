@@ -2,6 +2,7 @@ import {getLanguagesInfo} from "./language.js";
 import {getTools} from "./tools.js";
 import {getInterestsData} from "./interests.js";
 import {loadFromSessionStorage, saveToSessionStorage} from "./saveData.js";
+import {getEducationsData} from "./education.js";
 
 const profileImg = "public/profileImg.png";
 
@@ -39,8 +40,7 @@ document.querySelector('#app').innerHTML = `
     <div class="footerContainer">
         <div class="educationBoxContainer">
             <input class="boxTitile" id="educationTitle" value="Education"/>
-            
-            
+            <div id="listEducationContainer" class="listEducationContainer"></div>
         </div>
         
         <div class="extraBoxContainer">
@@ -62,6 +62,7 @@ document.querySelector('#app').innerHTML = `
 
 getLanguagesInfo()
 getTools()
+getEducationsData()
 getInterestsData()
 
 
