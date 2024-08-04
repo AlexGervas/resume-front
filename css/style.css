@@ -14,12 +14,42 @@ body {
     gap: 20px;
 }
 
-button {
-    background: #28D979;
-    border-radius: 20px;
+.button-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-button {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #28D979;
     border: none;
-    padding: 10px;
+    border-radius: 20px;
     cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.ripple-button:hover {
+    background-color: #02a03c;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 .headerContainer {
