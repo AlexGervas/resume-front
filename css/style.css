@@ -431,18 +431,49 @@ button {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.educationList.active {
+    background: #28D979;
+}
+
+.educationList.inactive {
+    background: #FFFFFF;
+}
+
+.likeLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heart-icon {
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.heart-icon.active {
+    fill: #F6ED1E;
+}
+
+.heart-icon.inactive {
+    fill: #FFFFFF;
 }
 
 .educationListDescription {
     width: 100px;
 }
 
-.educationTitle {
+.educationTitle,
+.educationDescriptionTitle {
     font-family: Poppins, serif;
     padding: 0;
     font-size: 10px;
     font-weight: 500;
     line-height: 15px;
+    width: 70%;
 }
 
 .educationHashtagsList {
@@ -450,6 +481,14 @@ button {
     font-size: 8px;
     font-weight: 400;
     line-height: 12px;
+    /*color: #149063;*/
+}
+
+.educationHashtagsList.active {
+    color: #EBF9F2;
+}
+
+.educationHashtagsList.inactive {
     color: #149063;
 }
 
@@ -458,6 +497,18 @@ button {
     font-size: 8px;
     font-weight: 400;
     line-height: 12px;
+}
+
+.educationTitle.active,
+.educationDescriptionTitle.active,
+.educationListFooter.active {
+    color: #FFFFFF;
+}
+
+.educationTitle.inactive,
+.educationDescriptionTitle.inactive,
+.educationListFooter.inactive {
+    color: #000000;
 }
 
 .extraBoxContainer {
