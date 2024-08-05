@@ -1,0 +1,90 @@
+/*Создание адаптивных макетов для любого размера экрана*/
+@media (max-width: 600px) {
+    .left, .right {
+        width: 100%; /* Каждый элемент растягивается от края до края */
+    }
+}
+
+/* Медиазапрос для экранов шириной до 768px (планшеты и мобильные устройства) */
+@media (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .experienceBoxContainer,
+    .educationBoxContainer,
+    .extraBoxContainer {
+        width: 100%;
+        height: auto;
+    }
+
+    .languagesBox {
+        width: 100%;
+    }
+
+    .nameBox {
+        width: 80%;
+        height: auto;
+    }
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ripple-button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .yourInfoContainer {
+        align-items: center;
+    }
+
+    .jobItem,
+    .educationList {
+        width: 100%;
+    }
+
+    .toolsBoxContainer {
+        width: 100%;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Медиазапрос для экранов шириной до 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .yourInfoName {
+        font-size: 12px;
+    }
+
+    .yourInfoRole {
+        font-size: 10px;
+    }
+
+    .jobItemMostRecentTitle {
+        font-size: 7px;
+    }
+
+    .jobItemTitle {
+        font-size: 7px;
+    }
+
+    .toolsBox {
+        width: 100%;
+        height: auto;
+    }
+
+    .disclaimer {
+        width: 90%;
+    }
+}
