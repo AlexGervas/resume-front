@@ -10,10 +10,12 @@
     .mainContainer {
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
 
     .interestsBox {
         width: 100%;
+        height: auto;
     }
 
     .yourInfoName, .yourInfoRole {
@@ -40,21 +42,31 @@
         align-items: center;
     }
 
-    .jobItem,
     .educationList {
         width: 100%;
     }
 
     .experienceBoxContainer,
     .toolsBoxContainer {
+        display: flex;
         width: 100%;
-        flex: 1 1 60%;
+        height: auto;
+    }
+
+    .jobItem {
+        width: 100%;
+    }
+
+    .jobListContainer {
+        width: 96%;
     }
 
     #toolsBox0, #toolsBox1, #toolsBox2 {
         width: 100%;
         gap: 30px;
         height: auto;
+        align-items: center;
+        justify-content: center;
     }
 
     .subTitleBlock {
