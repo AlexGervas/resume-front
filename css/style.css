@@ -57,6 +57,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 16px;
+    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
 }
 
 #showGreeting {

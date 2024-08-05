@@ -12,19 +12,18 @@
         gap: 10px;
     }
 
+    .interestsBox {
+        width: 100%;
+    }
+
+    .yourInfoName, .yourInfoRole {
+        width: 100%;
+    }
+
     .experienceBoxContainer,
     .educationBoxContainer,
     .extraBoxContainer {
         width: 100%;
-        height: auto;
-    }
-
-    .languagesBox {
-        width: 100%;
-    }
-
-    .nameBox {
-        width: 80%;
         height: auto;
     }
 
@@ -55,36 +54,8 @@
         flex-direction: column;
         gap: 10px;
     }
-}
-
-/* Медиазапрос для экранов шириной до 480px (мобильные устройства) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    .yourInfoName {
-        font-size: 12px;
-    }
-
-    .yourInfoRole {
-        font-size: 10px;
-    }
-
-    .jobItemMostRecentTitle {
-        font-size: 7px;
-    }
-
-    .jobItemTitle {
-        font-size: 7px;
-    }
-
-    .toolsBox {
-        width: 100%;
-        height: auto;
-    }
 
     .disclaimer {
-        width: 90%;
+        width: 100%;
     }
 }
