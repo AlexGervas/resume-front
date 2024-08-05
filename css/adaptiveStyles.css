@@ -20,7 +20,6 @@
         width: 100%;
     }
 
-    .experienceBoxContainer,
     .educationBoxContainer,
     .extraBoxContainer {
         width: 100%;
@@ -46,8 +45,24 @@
         width: 100%;
     }
 
+    .experienceBoxContainer,
     .toolsBoxContainer {
         width: 100%;
+        flex: 1 1 60%;
+    }
+
+    #toolsBox0, #toolsBox1, #toolsBox2 {
+        width: 100%;
+        gap: 30px;
+        height: auto;
+    }
+
+    .subTitleBlock {
+        width: 30%;
+    }
+
+    .logoTools {
+        transform: scale(1.2);
     }
 
     .footerContainer {
