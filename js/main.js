@@ -80,9 +80,8 @@ submitForm()
 saveToSessionStorage()
 loadFromSessionStorage()
 
-
 // Loading values when the page loads:
-window.onload = loadFromSessionStorage;
+document.addEventListener('DOMContentLoaded', loadFromSessionStorage);
 
 // Adding event handlers to automatically save values when changing:
 const elements = document.querySelectorAll('input, div[contenteditable], textarea');
@@ -90,6 +89,7 @@ elements.forEach(element => {
     element.addEventListener('input', saveToSessionStorage);
 });
 
+// Added Material Wave effect for download pdf btn
 document.querySelector('.ripple-button').addEventListener('click', function (e) {
     const button = e.currentTarget;
     const ripple = document.createElement('span');

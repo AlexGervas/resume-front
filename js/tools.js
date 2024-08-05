@@ -30,13 +30,36 @@ export function getTools() {
     const outputDiv = document.getElementById("toolsList");
 
     outputDiv.innerHTML = `
-        ${tools.map(item => `
-            <div class="toolsBox">
+        ${tools.map((item, index) => `
+            <div id="toolsBox${index}" class="toolsBox">
                 <div class="subTitleBlock">${item.type}</div>
                 ${item.list.map(value => `<a target="_blank" href="${value.link}"><img src="${value.logo}" class="logoTools" alt="" /></a>`).join('')}
             </div>
         `).join('')}
     `;
 
+    let activeBlock = null;
+
+    document.querySelectorAll('.toolsBox').forEach(block => {
+        block.addEventListener('click', function (event) {
+            event.stopPropagation(); // Останавливаем всплытие события
+
+            // Если уже есть активный блок, убираем класс enlarged
+            if (activeBlock && activeBlock !== this) {
+                activeBlock.classList.remove('enlarged');
+            }
+
+            // Добавляем класс enlarged к текущему блоку
+            this.classList.add('enlarged');
+            activeBlock = this; // Запоминаем активный блок
+        });
+    });
+
+    document.addEventListener('click', function () {
+        if (activeBlock) {
+            activeBlock.classList.remove('enlarged');
+            activeBlock = null; // Сбрасываем активный блок
+        }
+    });
 
 }

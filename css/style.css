@@ -387,6 +387,13 @@ body {
     padding: 16px 4px 16px 4px;
     height: 54px;
     width: 68px;
+    transition: transform 0.3s ease;
+}
+
+.toolsBox.enlarged {
+    transform: scale(1.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    z-index: 20;
 }
 
 .toolsBox a {
